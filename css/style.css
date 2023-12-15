@@ -1,0 +1,160 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+button {
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+    --mainColor: white;
+    --secondColor:#b7b546;
+}
+
+/*/start*/
+
+
+
+
+
+.home
+{
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgb(0, 0, 0, .8)), url("../images/opened-book-green-grass-sunlight.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.home h1 {
+    font-size: 15px;
+}
+/*Q&D*/
+.home p span {
+    display: inline-block;
+    font-size: 70px;
+    color: var(--secondColor);
+    animation: bounce 0.4s infinite alternate;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-5px);
+    }
+}
+    
+
+
+/*/////button////////////*/
+
+.home .btn-new {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 2px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid  #b7b546;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.1s, box-shadow 0.3s, border-radius 0.3s, transform 0.3s, text-shadow 0.3s, border 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+        
+    /* Hover */
+    .home .btn-new:hover {
+        background: linear-gradient(to right, #6e6e44, #b7b546);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        border-color: #b7b546;
+        perspective: 100px;
+    }
+
+        /* Pulsating */
+        @keyframes pulse {
+    
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+                border-width: 2px;
+            }
+    
+            40% {
+                transform: translateY(-10px);
+                border-width: 7px;
+                /* Increase border */
+            }
+    
+            60% {
+                transform: translateY(-5px);
+                border-width: 3px;
+                /* Adjust border */
+            }
+        }
+    
+        /* Apply pulsating */
+        .home .btn-new:active {
+            animation: pulse 0.1s ease-out;
+        }
+    
+
+
+/*//////////quote///////////////////////*/
+
+.home .quot-div{
+    border: 1px solid var(--secondColor);
+    border-radius: 20px;
+    width:fit-content;
+    display: inline-block;
+    margin: 20px;;
+}
+/*quote-text*/
+.quot-div p{
+        font-size: 23px;
+        
+    }
+/*quote-author*/
+    .quot-div h2{
+        font-size:17px;
+        color: var(--secondColor);
+    }
+    
+
+
+
+/*//////////////////////responsive///////////////////////////////*/
+        @media (max-width: 991px) {
+            .home h1 {
+                font-size: 11px;
+            }
+                        .home p span {
+                            font-size:60px;
+                        }
+                        .quot-div p {
+                            font-size: 14px;
+                        }    
+            }
+
+        @media (max-width: 768px) {
+            .home h1 {
+                font-size: 11;
+            }
+            .home p span{
+                font-size: 50px;
+            }
+            .quot-div p {
+                font-size: 14px;
+            }
+            .quot-div h2{
+                font-size: 10;
+            }
+            }
+
+
+
+            /*end*/
